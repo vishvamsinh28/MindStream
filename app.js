@@ -19,6 +19,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride("_method"));
 
+app.use((req, res, next) => {
+  const userAgent = req.headers["user-agent"];
+  if (userAgent.match(/mobile/i)) {
+    res.sendFile(path.join(__dirname, "public", "mobile.html"));
+  } else {
+    next();
+  }
+});
+
 app.use(
   session({
     secret: "thisshouldbeabettersecret!",

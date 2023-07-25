@@ -10,6 +10,7 @@ To run the website locally, you will need to have Node.js and MongoDB installed 
 2. Install the dependencies by running `npm install` in the project directory.
 3. Start the MongoDB server by running `mongosh` in a separate terminal window.
 4. Start the website by running `npm start` in the project directory.
+   5.Crete .env for mongodb url
 5. Open your web browser and navigate to `http://localhost:3000`.
 
 ## Features
